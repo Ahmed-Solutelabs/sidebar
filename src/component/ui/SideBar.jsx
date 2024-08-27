@@ -7,8 +7,8 @@ import { data } from "../../util/data";
 import useDebounce from "../../util/hook/useDebounce";
 
 const SideBar = ({ open, onClose }) => {
-  const [allListOfSpeaker, setAllListOfSpeaker] = useState([...data]);
-  const [speakerData, setSpeakerData] = useState(data);
+  const [allListOfSpeaker, setAllListOfSpeaker] = useState(structuredClone(data));
+  const [speakerData, setSpeakerData] = useState([...allListOfSpeaker]);
   const [selectedSpeaker, setSelectedSpeaker] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -29,13 +29,13 @@ const SideBar = ({ open, onClose }) => {
 
   // Handle speaker selection toggle
   const selectHandler = (speakerId) => {
-    const selectedSpeaker = speakerData.find(
+    const selectedSpeaker = allListOfSpeaker.find(
       (element) => element.id === speakerId
     );
     selectedSpeaker.isSelected = !selectedSpeaker.isSelected; // Toggle selection status
     setSpeakerData([...speakerData]); // Update the speaker list
     setAllListOfSpeaker([...allListOfSpeaker]); // Maintain the full speaker list
-    setSelectedSpeaker((prev) => [...prev, speakerId]); // Add to selected speakers
+    setSelectedSpeaker(allListOfSpeaker.filter((speaker) => speaker.isSelected)); // Add to selected speakers
   };
 
   return (
@@ -88,7 +88,14 @@ const SideBar = ({ open, onClose }) => {
                     </button>
                     <button
                       className="bg-orange-200 rounded px-4 py-2 text-orange-500"
-                      onClick={onClose}
+                      onClick={() => {
+                        const deepCopy = JSON.parse(JSON.stringify(data));
+                        setSelectedSpeaker([]);
+                        setAllListOfSpeaker([...deepCopy]);
+                        setSearchTerm("");
+                        setSpeakerData([...deepCopy]);
+                        console.log(allListOfSpeaker);
+                      }}
                     >
                       Cancel
                     </button>
