@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Sidebar Component with Transition and Speaker Selection
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+This project implements a sidebar component with smooth transitions for opening and closing. The sidebar includes a sticky header, a searchable list of speakers, and selectable items, with the ability to select multiple speakers and enable a save button once selections are made. The component is designed to be responsive and adjust to different device heights, even when zooming in and out.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Smooth Transition:** The sidebar opens and closes with a smooth transition.
+- **Sticky Header:** The header, including the title, search bar, and action buttons, remains sticky while the user scrolls through the list of speakers.
+- **Search Functionality:** Users can search for speakers by name, with results updating in real-time.
+- **Multi-Selection:** Users can select multiple speakers from the list. The save button becomes enabled once at least one speaker is selected.
+- **Responsive Design:** The sidebar is fully responsive and adjusts based on different device heights and zoom levels.
+- **Cross-Browser Compatibility:** The component has been tested and works across various browsers and devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React:** A JavaScript library for building user interfaces.
+- **Tailwind CSS:** A utility-first CSS framework for creating custom designs without writing custom CSS.
+- **Headless UI:** A set of completely unstyled, fully accessible UI components for React.
+- **Heroicons:** A set of free, MIT-licensed high-quality SVG icons for UI development.
 
-### `npm test`
+## Design Implementation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Responsive Components:** The design mockups were converted into responsive, accessible React components.
+- **Design Consistency:** Ensured consistent design across all pages and components, maintaining the look and feel of the original Figma design.
+- **Reusable UI Components:** Developed reusable UI components for flexibility and reusability across the project.
+- **Performance Optimization:** Optimized the performance of components for fast load times and smooth user interactions.
+- **Cross-Browser Compatibility:** Tested the component across various browsers and devices to ensure consistent functionality and appearance.
 
-### `npm run build`
+## How to Use
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the Repository:**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   git clone https://github.com/Ahmed-Solutelabs/sidebar.git
+   cd sidebar-component
